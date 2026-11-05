@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JanitorAI Bot Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>JanitorAI Bot Builder</h1>
+    <div class="topbar-actions">
+      <button id="downloadBtn" type="button" class="btn btn-secondary">Download all as .txt</button>
+      <button id="resetBtn" type="button" class="btn btn-danger">New Character</button>
+    </div>
+  </header>
+
+  <main>
+    <form id="composer" class="composer">
+      <label class="composer-label" for="promptInput">Describe your character, or ask for a revision (Ctrl+Enter also sends)</label>
+      <textarea id="promptInput" rows="6" autofocus
+        placeholder="e.g. A sarcastic librarian who secretly runs a speakeasy in the basement..."></textarea>
+      <button id="sendBtn" type="submit" class="btn btn-primary">Send</button>
+    </form>
+    <p id="status" class="status" role="status"></p>
+
+    <section id="conversation" class="conversation" aria-live="polite" aria-label="Conversation and generated character"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
